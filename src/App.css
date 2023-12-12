@@ -15,12 +15,30 @@ justify-content: center;
     font-family: sans-serif;
   }
   
-  /* This's a Gallery - start */
-  .grid-container {
-    columns: 5 200px;
-    column-gap: 1.5rem;
-    width: 90%;
-    margin: 0 auto;
+/* This's a MenuTop - start */
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+nav div {
+  padding: 4px 24px;
+  border: 1px solid #c4c4c4;
+  cursor: pointer;
+}
+
+
+/* This's a MenuTop - completed */
+/* This's a Gallery - start */
+.grid-container {
+  columns: 5 200px;
+  column-gap: 1.5rem;
+  width: 90%;
+  margin: 0 auto;
+  padding-top: 15px;
+    ;
 }
 
 .grid-container div {
@@ -38,8 +56,10 @@ justify-content: center;
 .grid-container div:hover img {
   filter: grayscale(0);
 }
+nav div:hover,
 .grid-container div:hover {
   border-color: coral;
+  transition: all .25s ease-in-out;
 }
 img {
   width: 100%;

@@ -3,18 +3,15 @@ import React from "react";
 export default function GalleryFC(prop) {
 	const image = prop.images;
 	return (
-		<div class="container">
+    <div className="container">
 
-			<div class="image-gallery grid-container">
+      <div className="image-gallery grid-container">
 				{image.map(item => (
-					<div key={item} class="column">
-
-						<img src={item} />
-
+          <div key={item.img} className="column">
+            <img src={item.img} />
 					</div>
 				))}
-			</div>
-
+      </div>
 		</div>
 	)
 }
