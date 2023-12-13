@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
 import MenuTop from './Menu';
-import GalleryFC from './galerey';
+import GalleryFC from './Gallery';
 
 export default function Toolbar_(prop) {
   const { filters, images } = prop.data;
