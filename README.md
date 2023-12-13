@@ -1,4 +1,5 @@
-[![Build status](https://ci.appveyor.com/api/projects/status/sef81ti39badqlah/branch/master?svg=true)](https://ci.appveyor.com/project/Tryd0g0lik/gallery/branch/master)
+
+[![Build status](https://ci.appveyor.com/api/projects/status/sef81ti39badqlah?svg=true)](https://ci.appveyor.com/project/Tryd0g0lik/gallery)
 ## Галерея
 
 **GitHub Pages**
