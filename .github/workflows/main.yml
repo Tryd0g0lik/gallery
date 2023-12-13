@@ -33,7 +33,8 @@ jobs:
       #   run: cd src/app/frontend && yarn run build:dev
       - name: Install dependencies
         run: yarn install
-
+      - name: Build frontend
+        run: yarn run build
 
       - name: Setup Pages
         uses: actions/configure-pages@v2
