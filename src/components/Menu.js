@@ -2,12 +2,14 @@ import React from "react";
 
 
 export default function MenuTop(prop) {
-  const menu = prop.menu;
+  const { topmenu, toggle } = prop.menu;
   return (
     <nav>
       {
-        menu.map(item => (
-          <div onClick={item => { console.log(item) }} key={item}><span>{item}</span></div>
+        topmenu.map(item => (
+          <div onClick={(item) => {
+            toggle(item.target.innerHTML);
+          }} key={item.name}><span>{item.name}</span></div>
         ))
       }
     </nav>
