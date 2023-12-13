@@ -1,6 +1,6 @@
 import React, { StrictMode } from 'react';
 import './App.css';
-import GalleryFC from './components/Galerey';
+
 import n_200 from "./img/d_200.jpg";
 import codystretch from "./img/codystretch.jpg";
 import dia from "./img/dia.jpg";
@@ -15,10 +15,13 @@ import transmission from "./img/transmission.jpg";
 import triangle from "./img/Triangle_003.jpg";
 import triangle_350_1 from "./img/Triangle_350x197_1.jpg";
 import triangle_350 from "./img/Triangle_350x197.jpg";
-import MenuTop from './components/Menu';
-import Toolbar from './components/toolbar';
 
-const topMenu = ["ALL", "Websites", "Flayers", "Busines Carde"];
+import Toolbar_ from './components/Toolbar';
+
+const topMenu = [{ name: "ALL", status: true },
+{ name: "Websites", status: false },
+{ name: "Flayers", status: false },
+{ name: "Busines Carde", status: false }];
 const images = [
   { img: n_200, category: "Websites" },
   { img: codystretch, category: "Flayers" },
@@ -36,13 +39,16 @@ const images = [
   { img: triangle_350, category: "Websites" }];
 
 function AppFC() {
-  const menu = { fun: MenuTop, menu: topMenu };
+  const data = { filters: topMenu, images: images };
+  // const menu = { fun: MenuTop, menu: topMenu };
   return (
     <>
       <StrictMode>
-        <MenuTop menu={topMenu} />
+        {/* <MenuTop menu={topMenu} /> */}
 
-        <GalleryFC images={images} />
+        {/* <GalleryFC images={images} /> */}
+
+        <Toolbar_ data={data} />
       </StrictMode>
     </>
   )
