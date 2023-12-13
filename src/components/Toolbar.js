@@ -12,23 +12,26 @@ export default function Toolbar_(prop) {
     setActive(currentState)
   }
 
+
   const topmenu = { topmenu: filters, toggle: toggle }
+  {
+    /**
+     * От представленного ниже фильтра на экране появляется число 1
+     */
+    active !== "ALL" ? (
+      result.unshift(images.filter(item => item.category === active))
+    ) : (
+      result.unshift(images)
+    )
+
+  }
+
   return (
     <>
 
       <MenuTop menu={topmenu} />
 
-      {
-        /**
-         * От представленного ниже фильтра на экране появляется число 1
-         */
-        active !== "ALL" ? (
-          result.unshift(images.filter(item => item.category === active))
-        ) : (
-          result.unshift(images)
-        )
 
-      }
       <GalleryFC images={result[0]} />
 
 
